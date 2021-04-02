@@ -1,5 +1,5 @@
 <template>
-  <div class="blank">
+  <div class="blank" v-cloak>
      <app-progress v-if="inProgress"
      @stop-progress="stopProgress"
      ></app-progress>
@@ -190,12 +190,16 @@ export default {
 
 <style lang="scss" scope>
 .blank {
-   
   position: relative;
- 
+  margin: 0;
+  padding: 0;
 }
-  .container {
+.container {
     display: block;
-  }
+    
+}
+[v-cloak] {
+   display: none;
+}
 
 </style>

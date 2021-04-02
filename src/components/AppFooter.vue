@@ -27,6 +27,7 @@ methods: {
 <style lang="scss" scope>
     .footer {
         display: block;
+        overflow: hidden;
         
         p {
             margin-right: auto;
@@ -47,7 +48,7 @@ methods: {
 
     }
      .hidePart {
-            transform: translateY(50%);
+            transform: translateY(60%);
         }
     .showAll{
             transform: translateY(0);

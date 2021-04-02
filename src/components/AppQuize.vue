@@ -4,7 +4,7 @@
        
         <div class="quiz-blank">
             <div class="quize-blank__text-block">
-                 <p class="quiz-blank__script-text" style="white-space: pre-line;">{{ questions[index].text }}</p>
+                 <p  v-if="questions[index].text" class="quiz-blank__script-text" style="white-space: pre-line;">{{ questions[index].text }}</p>
                     <transition name="fade" v-if="index===4">
                     <div class="quiz-blank__message" v-if="show">
                         <p 
@@ -153,8 +153,9 @@ export default {
         .quize-blank__text-block {
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             width: 100%;
-            margin-bottom: 100px;
+            padding-bottom: 80px;
             display: block;
+            min-height: 280px;
         }
         .btn{
                 margin: 15px 0;
@@ -211,7 +212,7 @@ export default {
             background: #ffffff;
             border-radius: 5px;
             position: relative;
-            margin: 0 auto 80px auto;
+            margin: 0 auto 0 auto;
             padding: 23px 12px 21px;
             width: fit-content;
 
@@ -227,8 +228,8 @@ export default {
                font-family: 'Bad Script', cursive;
                 text-align: center; 
                 color: #202024;
-                
                 font-size: 25px;
+                line-height: 35px;
             }
         }
     }
@@ -239,14 +240,17 @@ export default {
          .quiz-blank {
             padding-bottom: 30px;
             padding-top: 30px;
-        }
+        
          .quize-blank__text-block  {
             min-height: 100px;
+            padding-bottom: 60px;
         }
         .quize-blank__text-block  .quiz-blank__message {
-            margin-bottom: 30px;
+            margin-top: 0;
+            //margin-bottom: 30px;
             p {
-                font-size: 20px;
+                font-size: 14px;
+                line-height: 20px;
             }
 
         }
@@ -254,7 +258,12 @@ export default {
             font-size: 16px;
             line-height: 20px;
         }
-       
+    .quiz-blank__form select {
+            width: 180px;
+            height: 40px;
+            margin: 20px auto 0;
+       }
+    }
     }
     /* Extra Small Devices, Phones */
     @media only screen and (max-width : 480px) {

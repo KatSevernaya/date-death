@@ -484,7 +484,7 @@ section {
 .quiz__img-eye1 {
   position: absolute;
   bottom: 50px;
-  transform: translateX(-30%);
+  //transform: translateX(-30%);
   left: 0;
   opacity: .2;
   
@@ -521,13 +521,13 @@ section {
     .intro {
       background-size: contain;
     }
-    .intro .intro__question .btn, .quiz .btn, .conteiner .quiz-blank .quiz-blank__buttons .btn, .last-page .btn{
+    .intro .intro__question .btn, .quiz .btn, .conteiner .quiz-blank .quiz-blank__buttons .btn, .last-page .btn, .quiz-blank .quiz-blank__form .btn{
       width: 180px;
       height: 40px;
       margin: 20px auto;
       font-size: 14px; 
     }
-    .intro .intro__question .btn, .conteiner .quiz-blank .quiz-blank__buttons .btn:not(:nth-of-type(1)) {
+    .intro .intro__question .btn, .conteiner .quiz-blank .quiz-blank__buttons .btn:not(:nth-of-type(1)), .quiz .btn{
       margin-top: 0;
       margin-bottom: 20px;
     }

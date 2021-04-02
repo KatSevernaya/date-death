@@ -64,7 +64,7 @@ export default {
     margin-right: auto;
     margin-left: auto;
     max-width: 480px;
-   // padding-bottom: 120px;
+    padding-bottom: 120px;
     
     //padding-bottom: 100px;
 
